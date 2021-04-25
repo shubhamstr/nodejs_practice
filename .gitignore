@@ -6,3 +6,6 @@ weatherapp/node_modules
 
 express/node_modules
 express/package-lock.json
+
+
+express/public/staticsite/assets/libs
