@@ -2,6 +2,7 @@ const express = require('express')
 const path = require('path');
 const hbs = require("hbs")
 const app = express();
+const requests = require("requests");
 
 
 // console.log(path.join(__dirname, '../public/staticsite'));
@@ -29,6 +30,22 @@ app.get("/about", (req, res) => {
         name2: req.query.name
     })
 })
+app.get("/about/weather", (req, res) => {
+    requests(`http://api.openweathermap.org/data/2.5/weather?q=${req.query.name}&units=metric&appid=53e026615dee8ba0f9291a3216e2c095`)
+        .on('data', (chunk) => {
+            const wdata = JSON.parse(chunk);
+            const arrdata = [wdata];
+            // console.log(arrdata[0].main.temp)
+            console.log(`City Name is ${arrdata[0].name} And Temperature is ${arrdata[0].main.temp}`)
+            res.write(`City Name is ${arrdata[0].name} And Temperature is ${arrdata[0].main.temp}`);
+        })
+        .on('end', (err) => {
+            if (err) return console.log('connection closed due to errors', err);
+            res.end();
+            console.log('end');
+        });
+})
+
 
 
 app.get("/", (req, res) => {
