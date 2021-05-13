@@ -14,7 +14,7 @@ const getInfo = async (e) => {
         city.innerText = "Please Write the name before search";
     } else {
         try {
-            let url = `http://api.openweathermap.org/data/2.5/weather?q=${cityVal}&units=metric&appid=53e026615dee8ba0f9291a3216e2c095`;
+            let url = `https://api.openweathermap.org/data/2.5/weather?q=${cityVal}&units=metric&appid=53e026615dee8ba0f9291a3216e2c095`;
             const res = await fetch(url);
             const data = await res.json();
             const arr = [data];
