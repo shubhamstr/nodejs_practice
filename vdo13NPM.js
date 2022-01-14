@@ -12,3 +12,10 @@ console.log(chalk.green.underline.inverse("success"));
 const res = validator.isEmail("shubhamsutar5799@gmail.com");
 console.log(res);
 console.log(res ? chalk.green("success"):chalk.red("fail"));
+
+
+
+// npm init to initialise package
+// npm init -y
+// npm install chalk
+// npm install validator

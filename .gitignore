@@ -11,3 +11,4 @@ express/package-lock.json
 express/public/staticsite/assets/libs
 expressWeb/node_modules
 mongodb/node_modules
+node_modules
