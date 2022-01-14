@@ -1,18 +1,18 @@
-// const add = (a,b) =>{
-//     return a+b;
-// }
-
-// module.exports = add;
-
-
 const add = (a,b) =>{
     return a+b;
 }
-const sub = (a,b) =>{
-    return a-b;
-}
 
-// module.exports.add = add;
-// module.exports.sub = sub;
+module.exports = add;
 
-module.exports = {add, sub};
+
+// const add = (a,b) =>{
+//     return a+b;
+// }
+// const sub = (a,b) =>{
+//     return a-b;
+// }
+
+// // module.exports.add = add;
+// // module.exports.sub = sub;
+
+// module.exports = {add, sub};
