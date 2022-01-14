@@ -14,5 +14,3 @@ fs.readFile('vdo7.txt', 'utf-8', (err, data) => {
     console.log(data);
     console.log(err);
 });
-
-// fs.rename('vdo7.txt', 'vdo7m.txt');
